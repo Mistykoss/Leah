@@ -5,158 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estas Invitado!</title>
+    <link rel="stylesheet" href="index.2cdaf7bc.css">
 </head>
-<br>
 <div class="inicio" id="main-page">
     <div id="btn-start" class="jello-horizontal btn-start"></div>
 </div>
-
 <div class="container">
-    <a id="regalos" class="jello-horizontal btn-start" href="https://www.amazon.com/registries/gl/guest-view/JE8HH5H50RUP"></a>
-    <video id="invitacion">
-
-        <source src="/invitacion.3c7c34a3.mp4" type="video/mp4">
-    </video>
+  <div class=" axis">
+    <div class="regalo">
+        <a id="regalos" class="jello-horizontal btn-start" href="https://www.amazon.com/registries/gl/guest-view/JE8HH5H50RUP"></a>
+       </div>
+        <video id="invitacion">
+            <source src="invitacion.a0fbc94b.mp4" type="video/mp4">
+        </video>
+  </div>
 </div>
 
+<script src="index.de158e3a.js"></script>
 
-
-<script>document.getElementById("invitacion").play();
-document.getElementById("btn-start").addEventListener("click", ()=>{
-    const main = document.getElementById("main-page");
-    const video = document.getElementById("invitacion");
-    const btn_regalos = document.getElementById("regalos");
-    main.classList.add("desaparecer");
-    //reproducir video
-    video.play();
-    setTimeout(()=>{
-        btn_regalos.classList.add("show");
-    }, video.duration * 700);
-    setTimeout(()=>{
-        main.style.display = "none";
-    }, 1200);
-});
-
-</script>
-<style>:root {
-  --btn: calc(100vw / 2);
-}
-
-body {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("fondo.0b163fcb.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  place-content: center;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  overflow: hidden;
-}
-
-.show {
-  display: block !important;
-}
-
-.desaparecer {
-  opacity: 0;
-  transition: all 1s;
-}
-
-a {
-  text-decoration: none;
-}
-
-.btn-start {
-  max-height: 280px;
-  max-width: 280px;
-  width: var(--btn);
-  height: var(--btn);
-  cursor: pointer;
-  background-image: url("play.1f7b3e96.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 50%;
-  outline: 2px solid #fff;
-}
-
-.inicio {
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background-color: #ffdcf2;
-  place-content: center;
-  display: grid;
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  transform: translate(50%, 50%);
-}
-
-#regalos {
-  width: 120px;
-  height: 120px;
-  background-image: url("icon.b1b2fa1c.png");
-  transition: all 1s;
-  display: none;
-  position: absolute;
-  bottom: 20vh;
-  left: 40%;
-  transform: translate(-50%, -50%);
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-video {
-  width: auto;
-  height: 100vh;
-  object-fit: contain;
-  outline: 8px solid #000;
-  margin: 0;
-  padding: 0;
-}
-
-.jello-horizontal {
-  animation: 1.8s infinite both jello-horizontal;
-}
-
-@keyframes jello-horizontal {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-
-  30% {
-    transform: scale3d(1.25, .75, 1);
-  }
-
-  40% {
-    transform: scale3d(.75, 1.25, 1);
-  }
-
-  50% {
-    transform: scale3d(1.15, .85, 1);
-  }
-
-  65% {
-    transform: scale3d(.95, 1.05, 1);
-  }
-
-  75% {
-    transform: scale3d(1.05, .95, 1);
-  }
-
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-</style>
-
-<script src="/Leah.3464ddca.js"></script></html>
+<script src="Leah.59712999.js"></script></html>
