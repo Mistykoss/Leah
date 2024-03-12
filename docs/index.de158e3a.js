@@ -1,4 +1,3 @@
-document.getElementById("invitacion").play();
 document.getElementById("btn-start").addEventListener("click", ()=>{
     const main = document.getElementById("main-page");
     const video = document.getElementById("invitacion");
