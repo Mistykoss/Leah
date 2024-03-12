@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estas Invitado!</title>
+</head>
+<br>
+<div class="inicio" id="main-page">
+    <div id="btn-start" class="jello-horizontal btn-start"></div>
+</div>
+
+<div class="container">
+    <a id="regalos" class="jello-horizontal btn-start" href="https://www.amazon.com/registries/gl/guest-view/JE8HH5H50RUP"></a>
+    <video id="invitacion">
+
+        <source src="invitacion.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+</body>
+<script>
+    document.getElementById('invitacion').play();
+    document.getElementById('btn-start').addEventListener("click", () => {
+        const main = document.getElementById("main-page");
+        const video = document.getElementById("invitacion");
+        const btn_regalos = document.getElementById("regalos");
+        main.classList.add("desaparecer");
+        //reproducir video
+        video.play();
+
+        setTimeout(() => {
+            btn_regalos.classList.add("show");
+        }, video.duration * 700);
+
+        setTimeout(() => {
+            main.style.display = "none";
+        }, 1200);
+    })
+
+</script>
+<style>
+    :root {
+        --btn: calc(100vw /2);
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url("fondo.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        place-content: center;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .show {
+        display: block !important;
+    }
+
+    .desaparecer {
+        transition: 1s all;
+        opacity: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    .btn-start {
+        max-height: 280px;
+        max-width: 280px;
+        width: var(--btn);
+        height: var(--btn);
+        outline: white 2px solid;
+        border-radius: 50%;
+        background-image: url("play.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .inicio {
+        display: grid;
+        place-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: rgb(255, 220, 242);
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        transform: translate(50%, 50%);
+    }
+
+    #regalos {
+        display: none;
+        transition: all 1s;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        bottom: 20vh;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        background-image: url("icon.png");
+
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+    }
+
+    video {
+        outline: solid black 8px;
+        width: auto;
+        height: 100vh;
+        object-fit: contain;
+        margin: 0;
+        padding: 0;
+    }
+
+    .jello-horizontal {
+        -webkit-animation: jello-horizontal 1.8s both infinite;
+        animation: jello-horizontal 1.8s both infinite;
+    }
+
+    @-webkit-keyframes jello-horizontal {
+        0% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+        }
+
+        75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+        }
+
+        100% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    @keyframes jello-horizontal {
+        0% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+        }
+
+        75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+        }
+
+        100% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+</style>
+
+</html>
