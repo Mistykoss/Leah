@@ -3,6 +3,20 @@ const video = document.getElementById("invitacion");
 const btnStart = document.getElementById("btn-start");
 const btnRegalos = document.getElementById("regalo");
 
+
+
+// Obtener el idioma del dispositivo
+const idioma = navigator.language || navigator.userLanguage;
+
+// Verificar si el idioma está en inglés
+if (idioma.startsWith("en")) {
+  console.log("El idioma del dispositivo es inglés");
+  video.src = "invitacion_en.mp4";
+} 
+
+
+
+
 // Define las funciones de los event listeners
 function cargarVideo() {
   console.log("Video cargado");
