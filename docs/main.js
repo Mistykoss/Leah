@@ -1,7 +1,7 @@
 const main = document.getElementById("main-page");
 const video = document.getElementById("invitacion");
 const btnStart = document.getElementById("btn-start");
-const btnRegalos = document.getElementById("regalos");
+const btnRegalos = document.getElementById("regalo");
 
 // Define las funciones de los event listeners
 function cargarVideo() {
